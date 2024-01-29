@@ -1,13 +1,14 @@
 package com.asalcedo.whatsappclone.data
 
 data class TabData(
-    val title: String
+    val title: String,
+    val unreadCount: Int?
 )
 
 val tabs = listOf(
-    TabData(Tabs.CHATS.value),
-    TabData(Tabs.STATUS.value),
-    TabData(Tabs.CALLS.value)
+    TabData(title = Tabs.CHATS.value, unreadCount = 5),
+    TabData(title = Tabs.STATUS.value, unreadCount = null),
+    TabData(title = Tabs.CALLS.value, unreadCount = 4)
 )
 
 enum class Tabs(val value: String) {
